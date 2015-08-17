@@ -1,46 +1,49 @@
+package util;
+
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by arock on 8/13/2015.
  */
-@DatabaseTable(tableName = "User")
+@DatabaseTable(tableName = "util.User")
 public class User implements Serializable {
     @DatabaseField(generatedId = true)
     private int userID;
     @DatabaseField(index = true)
-    float weight;
+    double weight;
     @DatabaseField
-    float height;
+    double height;
     @DatabaseField
     int age;
     @DatabaseField
     String sex;
     @DatabaseField
-    float bmi;
+    double bmi;
     @DatabaseField
     int status;
     @DatabaseField
-    int bmr;
+    double bmr;
     @DatabaseField
-    float intensiveact;
+    double intensiveact;
     @DatabaseField
-    float caloriesmaintain;
+    double caloriesmaintain;
     @DatabaseField
-    float weightGoal;
+    double weightGoal;
     @DatabaseField
-    String dateStart;
+    Date dateStart;
     @DatabaseField
-    String dateFinish;
+    Date dateFinish;
 
 //    @DatabaseField(persisted = )
 
     public User() {
     }
 
-    public User(int userID, float weight, float height, int age, String sex, float bmi, int status, int bmr, float intensiveact, float caloriesmaintain, float weightGoal, String dateStart, String dateFinish) {
+    public User(int userID, double weight, double height, int age, String sex, double bmi, int status, double bmr, double intensiveact, double caloriesmaintain, double weightGoal, Date dateStart, Date dateFinish) {
         this.userID = userID;
         this.weight = weight;
         this.height = height;
@@ -64,19 +67,19 @@ public class User implements Serializable {
         this.userID = userID;
     }
 
-    public float getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public float getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
@@ -96,11 +99,11 @@ public class User implements Serializable {
         this.sex = sex;
     }
 
-    public float getBmi() {
+    public double getBmi() {
         return bmi;
     }
 
-    public void setBmi(float bmi) {
+    public void setBmi(double bmi) {
         this.bmi = bmi;
     }
 
@@ -112,7 +115,7 @@ public class User implements Serializable {
         this.status = status;
     }
 
-    public int getBmr() {
+    public double getBmr() {
         return bmr;
     }
 
@@ -120,43 +123,48 @@ public class User implements Serializable {
         this.bmr = bmr;
     }
 
-    public float getIntensiveact() {
+    public double getIntensiveact() {
         return intensiveact;
     }
 
-    public void setIntensiveact(float intensiveact) {
+    public void setIntensiveact(double intensiveact) {
         this.intensiveact = intensiveact;
     }
 
-    public float getCaloriesmaintain() {
+    public double getCaloriesmaintain() {
         return caloriesmaintain;
     }
 
-    public void setCaloriesmaintain(float caloriesmaintain) {
+    public void setCaloriesmaintain(double caloriesmaintain) {
         this.caloriesmaintain = caloriesmaintain;
     }
 
-    public float getWeightGoal() {
+    public double getWeightGoal() {
         return weightGoal;
     }
 
-    public void setWeightGoal(float weightGoal) {
+    public void setWeightGoal(double weightGoal) {
         this.weightGoal = weightGoal;
     }
 
-    public String getDateStart() {
+    public Date getDateStart() {
         return dateStart;
     }
 
-    public void setDateStart(String dateStart) {
+    public void setDateStart(Date dateStart) {
         this.dateStart = dateStart;
     }
 
-    public String getDateFinish() {
+    public Date getDateFinish() {
         return dateFinish;
     }
 
-    public void setDateFinish(String dateFinish) {
+    public void setDateFinish(Date dateFinish) {
         this.dateFinish = dateFinish;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
